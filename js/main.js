@@ -22,10 +22,8 @@ var app = {
 	
 	initialize: function() {
 		var self = this;
-		this.homeTpl = Handlebars.compile($("#home-tpl").html());
-		this.employeeLiTpl = Handlebars.compile($("#employee-li-tpl").html());
 		this.store = new LocalStorageStore(function() {
-			self.renderHomeView();
+			$('body').html(new HomeView(self.store).render().el);
 		});
 	}
 
