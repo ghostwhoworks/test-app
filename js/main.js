@@ -17,7 +17,6 @@ var app = {
 	
 	renderHomeView: function() {
 		$('body').html(this.homeTpl());
-		self.showAlert('Store Initialized', 'Info');
 		$('.search-key').on('keyup', $.proxy(this.findByName, this));
 	},
 	
